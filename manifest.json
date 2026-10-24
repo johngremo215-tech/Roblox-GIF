@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox GIF Picker",
+  "version": "1.0.0",
+  "description": "Search GIFs and copy links to share where Roblox chat allows links.",
+  "action": {
+    "default_title": "Roblox GIF Picker",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.giphy.com/*"]
+}

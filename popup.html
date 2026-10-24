@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roblox GIF Picker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="logo">GIF</div>
+    <div>
+      <h1>Roblox GIF Picker</h1>
+      <p>Find a reaction. Copy its link.</p>
+    </div>
+  </header>
+
+  <details class="settings">
+    <summary>GIF search setup</summary>
+    <label for="apiKey">GIPHY API key</label>
+    <input id="apiKey" type="password" placeholder="Paste your API key">
+    <button id="saveKey" class="secondary">Save key on this browser</button>
+    <small>Get a key from GIPHY's developer portal. Keep this extension private while testing, and restrict your key if the provider offers that option.</small>
+  </details>
+
+  <form id="searchForm">
+    <label class="sr-only" for="query">Search GIFs</label>
+    <input id="query" type="search" placeholder="Try “Roblox funny”..." maxlength="80" required>
+    <button type="submit">Search</button>
+  </form>
+
+  <div class="hint">Choose a GIF to copy its URL. Roblox may not display animated GIFs directly in chat.</div>
+  <p id="status" role="status" aria-live="polite">Enter a search and press Search.</p>
+  <main id="results" aria-label="GIF search results"></main>
+  <footer>GIFs provided by GIPHY · Use links only where permitted.</footer>
+  <script src="popup.js"></script>
+</body>
+</html>
